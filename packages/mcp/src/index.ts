@@ -31,6 +31,7 @@ import { registerGetPositions } from "./tools/get-positions.js";
 // Order tools
 import { registerGetOrders } from "./tools/get-orders.js";
 import { registerCreateOrder } from "./tools/create-order.js";
+import { registerCreateOrderV2 } from "./tools/create-order-v2.js";
 import { registerCancelOrder } from "./tools/cancel-order.js";
 import { registerBatchCancelOrders } from "./tools/batch-cancel-orders.js";
 
@@ -115,6 +116,7 @@ export default function createServer(options: CreateServerOptions = {}) {
   // Register order tools
   registerGetOrders(server, ordersApi);
   registerCreateOrder(server, ordersApi, marketApi, portfolioApi);
+  registerCreateOrderV2(server, apiKey, privateKey, basePath);
   registerCancelOrder(server, ordersApi);
   registerBatchCancelOrders(server, ordersApi);
 
