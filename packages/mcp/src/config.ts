@@ -14,4 +14,9 @@ export {
   createPortfolioApi,
   createOrdersApi,
   createEventsApi,
+  createExchangeApi,
+  createLiveDataApi,
+  createMilestoneApi,
+  createStructuredTargetsApi,
+  createSearchApi,
 } from "@newyorkcompute/kalshi-core";

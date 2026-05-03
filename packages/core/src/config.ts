@@ -10,6 +10,11 @@ import {
   PortfolioApi,
   OrdersApi,
   EventsApi,
+  ExchangeApi,
+  LiveDataApi,
+  MilestoneApi,
+  StructuredTargetsApi,
+  SearchApi,
 } from "kalshi-typescript";
 
 /**
@@ -153,5 +158,45 @@ export function createOrdersApi(config: KalshiConfig): OrdersApi {
 export function createEventsApi(config: KalshiConfig): EventsApi {
   const sdkConfig = createSdkConfig(config);
   return new EventsApi(sdkConfig);
+}
+
+/**
+ * Create an ExchangeApi instance for exchange status/schedule
+ */
+export function createExchangeApi(config: KalshiConfig): ExchangeApi {
+  const sdkConfig = createSdkConfig(config);
+  return new ExchangeApi(sdkConfig);
+}
+
+/**
+ * Create a LiveDataApi instance for live event data
+ */
+export function createLiveDataApi(config: KalshiConfig): LiveDataApi {
+  const sdkConfig = createSdkConfig(config);
+  return new LiveDataApi(sdkConfig);
+}
+
+/**
+ * Create a MilestoneApi instance for milestone markets
+ */
+export function createMilestoneApi(config: KalshiConfig): MilestoneApi {
+  const sdkConfig = createSdkConfig(config);
+  return new MilestoneApi(sdkConfig);
+}
+
+/**
+ * Create a StructuredTargetsApi instance for structured targets
+ */
+export function createStructuredTargetsApi(config: KalshiConfig): StructuredTargetsApi {
+  const sdkConfig = createSdkConfig(config);
+  return new StructuredTargetsApi(sdkConfig);
+}
+
+/**
+ * Create a SearchApi instance for market search/discovery
+ */
+export function createSearchApi(config: KalshiConfig): SearchApi {
+  const sdkConfig = createSdkConfig(config);
+  return new SearchApi(sdkConfig);
 }
 

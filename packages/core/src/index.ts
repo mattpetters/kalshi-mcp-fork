@@ -15,6 +15,11 @@ export {
   createPortfolioApi,
   createOrdersApi,
   createEventsApi,
+  createExchangeApi,
+  createLiveDataApi,
+  createMilestoneApi,
+  createStructuredTargetsApi,
+  createSearchApi,
 } from "./config.js";
 
 // Formatting utilities
